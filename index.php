@@ -38,9 +38,9 @@ class Aorp
             throw new \Exception("Resposta inesperada, atualize o script!", 2);
         }
 
-        $this->date   = $nodeDataArr[1]->nodeValue;
-        $this->silver = (float) $nodeSilverArr[1]->nodeValue;
-        $this->gold   = (float) $nodeGoldArr[1]->nodeValue;
+        $this->date   = $nodeDataArr->item(1)->nodeValue;
+        $this->silver = (float) $nodeSilverArr->item(1)->nodeValue;
+        $this->gold   = (float) $nodeGoldArr->item(1)->nodeValue;
     }
 
     public function getDate(){
